@@ -1,0 +1,62 @@
+//VER HTML
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML, CSS and JavaScript demo</title>
+</head>
+
+<body>
+    <!-- Start your code here -->
+    <section id="ZoneJeu">
+        <button onclick="clickfonction(carte_1)"><div class="Cartes" id="carte_1"></div></button>
+        <button onclick="clickfonction(carte_2)"><div class="Cartes" id="carte_2"></div></button>
+        <button onclick="clickfonction(carte_3)"><div class="Cartes" id="carte_3"></div></button>
+        <button onclick="clickfonction(carte_4)"><div class="Cartes" id="carte_4"></div></button>
+
+    </section>
+    <!-- End your code here -->
+</body>
+
+</html>
+
+//VER CSS
+
+#ZoneJeu {
+  border: 1px solid;
+  display: flex; /* Activer le flex */
+  background-color: #03cafc; /* Couleur arrière */
+  width: 400px; /* Largeur */
+  height: 100px; /* Hauteur */
+  align-items: center; /* Rangement auto  en fonction de la hauteur de la ZoneJeu */
+  justify-content: space-around; /* Rangement auto  en fonction de la largeur de la ZoneJeu*/
+}
+
+.Cartes{
+  background-color: #f1f1f1; /* Couleur arrière carte */
+  display: flex; /* Activer le flex */
+  align-items: center; /* Aligne l'écriture */
+  justify-content: space-around; /* Espace équitablement l'écriture */
+                                /* Les trois au-dessus permettent d'aligner le texte dans la case */
+  padding: 10px; /* Largeur carte*/
+  height: 50px;
+  width: 30px;
+  
+}
+
+//VER JV
+
+var carte_1=document.getElementById("carte_1");
+var carte_2=document.getElementById("carte_2");
+var carte_3=document.getElementById("carte_3");
+var carte_4=document.getElementById("carte_4");
+
+var nbr_carte_retournees=0;
+
+function clickfonction(idcarte){ /* Changer la valeur de la case où tu cliques */
+    idcarte.innerHTML="10";
+    nbr_carte_retournees=nbr_carte_retournees+1;
+      if(nbr_carte_retournees==2){
+        idcarte.innerHTML="20";
+      }
